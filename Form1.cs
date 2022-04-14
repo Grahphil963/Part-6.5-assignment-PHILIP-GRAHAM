@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Rock_Paper_Scissors_Philip_Graham
 {
-    public partial class Form1 : Form
+    public partial class RockPaperScissors : Form
     {
-        public Form1()
+        public RockPaperScissors()
         {
             InitializeComponent();
         }

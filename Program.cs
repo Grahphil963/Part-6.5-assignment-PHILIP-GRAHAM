@@ -16,7 +16,7 @@ namespace Rock_Paper_Scissors_Philip_Graham
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new RockPaperScissors());
         }
     }
 }
