@@ -39,7 +39,42 @@ namespace Rock_Paper_Scissors_Philip_Graham
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
+           Random generator = new Random();
+
+            int randomNumber;
+            int wins;
+            int losses;
+            int ties;
             
+
+           randomNumber = generator.Next(1, 4);
+            if (randomNumber == 1)
+                imgOpponent.Image = Properties.Resources.istockphoto_170215830_612x612;
+            if (randomNumber == 2)
+                imgOpponent.Image = Properties.Resources._1_04851_00_BL_Notebook_Paper_Punch_G_600x735;
+            if (randomNumber == 3)
+                imgOpponent.Image = Properties.Resources.download;
+            if (randomNumber == 1 && radRock.Checked)
+                lblGameResult.Text = ("You tied");
+            if (randomNumber == 1 && radPaper.Checked)
+                lblGameResult.Text = ("You Lost");
+            if (randomNumber == 1 && radScissors.Checked)
+                lblGameResult.Text = ("You Won");
+            if (randomNumber == 2 && radRock.Checked)
+                lblGameResult.Text = ("You win");
+            if (randomNumber == 2 && radPaper.Checked)
+                lblGameResult.Text = ("You tied");
+            if (randomNumber == 2 && radScissors.Checked)
+                lblGameResult.Text = ("You lose");
+            if (randomNumber == 3 && radRock.Checked)
+                lblGameResult.Text = ("You win");
+            if (randomNumber == 3 && radPaper.Checked)
+                lblGameResult.Text = ("You lose");
+            if (randomNumber == 3 && radScissors.Checked)
+                lblGameResult.Text = ("You tie");
+
+
+
         }
     }
 }
