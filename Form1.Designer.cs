@@ -40,6 +40,12 @@
             this.imgOpponent = new System.Windows.Forms.PictureBox();
             this.lblPlayer = new System.Windows.Forms.Label();
             this.btnPlay = new System.Windows.Forms.Button();
+            this.lblNumberOfWins = new System.Windows.Forms.Label();
+            this.lblNumberOfTies = new System.Windows.Forms.Label();
+            this.lblNumberOFLosses = new System.Windows.Forms.Label();
+            this.lblWins = new System.Windows.Forms.Label();
+            this.lblTies = new System.Windows.Forms.Label();
+            this.lblLosses = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgOpponent)).BeginInit();
             this.SuspendLayout();
@@ -47,9 +53,11 @@
             // radRock
             // 
             this.radRock.AutoSize = true;
-            this.radRock.Location = new System.Drawing.Point(52, 115);
+            this.radRock.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radRock.Location = new System.Drawing.Point(71, 309);
+            this.radRock.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radRock.Name = "radRock";
-            this.radRock.Size = new System.Drawing.Size(51, 17);
+            this.radRock.Size = new System.Drawing.Size(90, 31);
             this.radRock.TabIndex = 0;
             this.radRock.TabStop = true;
             this.radRock.Text = "Rock";
@@ -59,9 +67,11 @@
             // radPaper
             // 
             this.radPaper.AutoSize = true;
-            this.radPaper.Location = new System.Drawing.Point(50, 138);
+            this.radPaper.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radPaper.Location = new System.Drawing.Point(195, 310);
+            this.radPaper.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radPaper.Name = "radPaper";
-            this.radPaper.Size = new System.Drawing.Size(53, 17);
+            this.radPaper.Size = new System.Drawing.Size(105, 31);
             this.radPaper.TabIndex = 1;
             this.radPaper.TabStop = true;
             this.radPaper.Text = "Paper";
@@ -71,9 +81,11 @@
             // radScissors
             // 
             this.radScissors.AutoSize = true;
-            this.radScissors.Location = new System.Drawing.Point(50, 161);
+            this.radScissors.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radScissors.Location = new System.Drawing.Point(334, 307);
+            this.radScissors.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.radScissors.Name = "radScissors";
-            this.radScissors.Size = new System.Drawing.Size(64, 17);
+            this.radScissors.Size = new System.Drawing.Size(140, 31);
             this.radScissors.TabIndex = 2;
             this.radScissors.TabStop = true;
             this.radScissors.Text = "Scissors";
@@ -83,27 +95,33 @@
             // lblInstructions
             // 
             this.lblInstructions.AutoSize = true;
-            this.lblInstructions.Location = new System.Drawing.Point(12, 85);
+            this.lblInstructions.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblInstructions.Location = new System.Drawing.Point(16, 279);
+            this.lblInstructions.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblInstructions.Name = "lblInstructions";
-            this.lblInstructions.Size = new System.Drawing.Size(176, 13);
+            this.lblInstructions.Size = new System.Drawing.Size(508, 27);
             this.lblInstructions.TabIndex = 4;
             this.lblInstructions.Text = "Please select rock paper or scissors";
             // 
             // lblCpu
             // 
             this.lblCpu.AutoSize = true;
-            this.lblCpu.Location = new System.Drawing.Point(530, 85);
+            this.lblCpu.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCpu.Location = new System.Drawing.Point(589, 34);
+            this.lblCpu.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCpu.Name = "lblCpu";
-            this.lblCpu.Size = new System.Drawing.Size(100, 13);
+            this.lblCpu.Size = new System.Drawing.Size(264, 27);
             this.lblCpu.TabIndex = 5;
             this.lblCpu.Text = "Opponenet\'s Result";
             // 
             // lblGameResult
             // 
             this.lblGameResult.AutoSize = true;
-            this.lblGameResult.Location = new System.Drawing.Point(246, 329);
+            this.lblGameResult.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblGameResult.Location = new System.Drawing.Point(672, 313);
+            this.lblGameResult.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblGameResult.Name = "lblGameResult";
-            this.lblGameResult.Size = new System.Drawing.Size(71, 13);
+            this.lblGameResult.Size = new System.Drawing.Size(171, 27);
             this.lblGameResult.TabIndex = 6;
             this.lblGameResult.Text = "Game Result:";
             // 
@@ -116,9 +134,10 @@
             // imgPlayer
             // 
             this.imgPlayer.Image = global::Rock_Paper_Scissors_Philip_Graham.Properties.Resources.inline_image_preview;
-            this.imgPlayer.Location = new System.Drawing.Point(207, 115);
+            this.imgPlayer.Location = new System.Drawing.Point(237, 78);
+            this.imgPlayer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imgPlayer.Name = "imgPlayer";
-            this.imgPlayer.Size = new System.Drawing.Size(234, 132);
+            this.imgPlayer.Size = new System.Drawing.Size(312, 142);
             this.imgPlayer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgPlayer.TabIndex = 10;
             this.imgPlayer.TabStop = false;
@@ -127,9 +146,10 @@
             // imgOpponent
             // 
             this.imgOpponent.Image = global::Rock_Paper_Scissors_Philip_Graham.Properties.Resources.inline_image_preview;
-            this.imgOpponent.Location = new System.Drawing.Point(483, 115);
+            this.imgOpponent.Location = new System.Drawing.Point(604, 78);
+            this.imgOpponent.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.imgOpponent.Name = "imgOpponent";
-            this.imgOpponent.Size = new System.Drawing.Size(234, 132);
+            this.imgOpponent.Size = new System.Drawing.Size(312, 142);
             this.imgOpponent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.imgOpponent.TabIndex = 9;
             this.imgOpponent.TabStop = false;
@@ -137,28 +157,106 @@
             // lblPlayer
             // 
             this.lblPlayer.AutoSize = true;
-            this.lblPlayer.Location = new System.Drawing.Point(281, 84);
+            this.lblPlayer.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblPlayer.Location = new System.Drawing.Point(271, 34);
+            this.lblPlayer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblPlayer.Name = "lblPlayer";
-            this.lblPlayer.Size = new System.Drawing.Size(69, 13);
+            this.lblPlayer.Size = new System.Drawing.Size(189, 27);
             this.lblPlayer.TabIndex = 11;
             this.lblPlayer.Text = "Player Result";
             // 
             // btnPlay
             // 
-            this.btnPlay.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPlay.Location = new System.Drawing.Point(483, 276);
+            this.btnPlay.BackColor = System.Drawing.Color.Crimson;
+            this.btnPlay.Font = new System.Drawing.Font("Proxy 5", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPlay.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnPlay.Location = new System.Drawing.Point(71, 347);
+            this.btnPlay.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnPlay.Name = "btnPlay";
-            this.btnPlay.Size = new System.Drawing.Size(241, 135);
+            this.btnPlay.Size = new System.Drawing.Size(307, 130);
             this.btnPlay.TabIndex = 12;
             this.btnPlay.Text = "Play Round";
-            this.btnPlay.UseVisualStyleBackColor = true;
+            this.btnPlay.UseVisualStyleBackColor = false;
             this.btnPlay.Click += new System.EventHandler(this.btnPlay_Click);
+            // 
+            // lblNumberOfWins
+            // 
+            this.lblNumberOfWins.AutoSize = true;
+            this.lblNumberOfWins.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberOfWins.Location = new System.Drawing.Point(559, 402);
+            this.lblNumberOfWins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumberOfWins.Name = "lblNumberOfWins";
+            this.lblNumberOfWins.Size = new System.Drawing.Size(36, 27);
+            this.lblNumberOfWins.TabIndex = 13;
+            this.lblNumberOfWins.Text = "0 ";
+            // 
+            // lblNumberOfTies
+            // 
+            this.lblNumberOfTies.AutoSize = true;
+            this.lblNumberOfTies.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberOfTies.Location = new System.Drawing.Point(695, 402);
+            this.lblNumberOfTies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumberOfTies.Name = "lblNumberOfTies";
+            this.lblNumberOfTies.Size = new System.Drawing.Size(25, 27);
+            this.lblNumberOfTies.TabIndex = 14;
+            this.lblNumberOfTies.Text = "0";
+            // 
+            // lblNumberOFLosses
+            // 
+            this.lblNumberOFLosses.AutoSize = true;
+            this.lblNumberOFLosses.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumberOFLosses.Location = new System.Drawing.Point(813, 402);
+            this.lblNumberOFLosses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblNumberOFLosses.Name = "lblNumberOFLosses";
+            this.lblNumberOFLosses.Size = new System.Drawing.Size(25, 27);
+            this.lblNumberOFLosses.TabIndex = 15;
+            this.lblNumberOFLosses.Text = "0";
+            // 
+            // lblWins
+            // 
+            this.lblWins.AutoSize = true;
+            this.lblWins.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWins.Location = new System.Drawing.Point(607, 402);
+            this.lblWins.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblWins.Name = "lblWins";
+            this.lblWins.Size = new System.Drawing.Size(67, 27);
+            this.lblWins.TabIndex = 16;
+            this.lblWins.Text = "Wins";
+            // 
+            // lblTies
+            // 
+            this.lblTies.AutoSize = true;
+            this.lblTies.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTies.Location = new System.Drawing.Point(735, 402);
+            this.lblTies.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTies.Name = "lblTies";
+            this.lblTies.Size = new System.Drawing.Size(62, 27);
+            this.lblTies.TabIndex = 17;
+            this.lblTies.Text = "Ties";
+            // 
+            // lblLosses
+            // 
+            this.lblLosses.AutoSize = true;
+            this.lblLosses.Font = new System.Drawing.Font("Proxy 5", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLosses.Location = new System.Drawing.Point(853, 402);
+            this.lblLosses.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLosses.Name = "lblLosses";
+            this.lblLosses.Size = new System.Drawing.Size(102, 27);
+            this.lblLosses.TabIndex = 18;
+            this.lblLosses.Text = "Losses";
             // 
             // RockPaperScissors
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 14F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.DarkCyan;
+            this.ClientSize = new System.Drawing.Size(957, 485);
+            this.Controls.Add(this.lblLosses);
+            this.Controls.Add(this.lblTies);
+            this.Controls.Add(this.lblWins);
+            this.Controls.Add(this.lblNumberOFLosses);
+            this.Controls.Add(this.lblNumberOfTies);
+            this.Controls.Add(this.lblNumberOfWins);
             this.Controls.Add(this.btnPlay);
             this.Controls.Add(this.lblPlayer);
             this.Controls.Add(this.imgPlayer);
@@ -169,6 +267,8 @@
             this.Controls.Add(this.radScissors);
             this.Controls.Add(this.radPaper);
             this.Controls.Add(this.radRock);
+            this.Font = new System.Drawing.Font("Proxy 5", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "RockPaperScissors";
             this.Text = "Rock Paper Scissors";
             ((System.ComponentModel.ISupportInitialize)(this.imgPlayer)).EndInit();
@@ -191,6 +291,12 @@
         private System.Windows.Forms.PictureBox imgPlayer;
         private System.Windows.Forms.Label lblPlayer;
         private System.Windows.Forms.Button btnPlay;
+        private System.Windows.Forms.Label lblNumberOfWins;
+        private System.Windows.Forms.Label lblNumberOfTies;
+        private System.Windows.Forms.Label lblNumberOFLosses;
+        private System.Windows.Forms.Label lblWins;
+        private System.Windows.Forms.Label lblTies;
+        private System.Windows.Forms.Label lblLosses;
     }
 }
 

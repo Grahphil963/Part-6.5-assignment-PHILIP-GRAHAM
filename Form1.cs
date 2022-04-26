@@ -12,9 +12,14 @@ namespace Rock_Paper_Scissors_Philip_Graham
 {
     public partial class RockPaperScissors : Form
     {
+        int wins = 0;
+        int losses = 0;
+        int ties = 0;
+        Random generator = new Random();
         public RockPaperScissors()
         {
             InitializeComponent();
+
         }
 
         private void rdoRock_CheckedChanged(object sender, EventArgs e)
@@ -39,15 +44,14 @@ namespace Rock_Paper_Scissors_Philip_Graham
 
         private void btnPlay_Click(object sender, EventArgs e)
         {
-           Random generator = new Random();
-
-            int randomNumber;
-            int wins;
-            int losses;
-            int ties;
             
 
-           randomNumber = generator.Next(1, 4);
+         
+
+            int randomNumber;
+            
+
+            randomNumber = generator.Next(1, 4);
             if (randomNumber == 1)
                 imgOpponent.Image = Properties.Resources.istockphoto_170215830_612x612;
             if (randomNumber == 2)
@@ -55,23 +59,58 @@ namespace Rock_Paper_Scissors_Philip_Graham
             if (randomNumber == 3)
                 imgOpponent.Image = Properties.Resources.download;
             if (randomNumber == 1 && radRock.Checked)
+            {
                 lblGameResult.Text = ("You tied");
-            if (randomNumber == 1 && radPaper.Checked)
-                lblGameResult.Text = ("You Lost");
-            if (randomNumber == 1 && radScissors.Checked)
-                lblGameResult.Text = ("You Won");
+                ties = ties+1;
+            }
             if (randomNumber == 2 && radRock.Checked)
-                lblGameResult.Text = ("You win");
-            if (randomNumber == 2 && radPaper.Checked)
-                lblGameResult.Text = ("You tied");
-            if (randomNumber == 2 && radScissors.Checked)
-                lblGameResult.Text = ("You lose");
+            {
+                lblGameResult.Text = ("You Lose");
+                losses  = losses + 1;
+            }
             if (randomNumber == 3 && radRock.Checked)
+            {
                 lblGameResult.Text = ("You win");
+                wins = wins + 1;
+            }
+            if (randomNumber == 1 && radPaper.Checked)
+            {
+                lblGameResult.Text = ("You Won");
+                wins  = wins +1;
+            }
+            if (randomNumber == 2 && radPaper.Checked)
+            {
+                lblGameResult.Text = ("You tied");
+                ties = ties + 1;
+            }
             if (randomNumber == 3 && radPaper.Checked)
+            {
                 lblGameResult.Text = ("You lose");
+                losses = losses + 1;
+            }
+            if (randomNumber == 1 && radScissors.Checked)
+            {
+                lblGameResult.Text = ("You Lose");
+                losses = losses +1;
+            }
+           
+            
+            if (randomNumber == 2 && radScissors.Checked)
+            {
+                lblGameResult.Text = ("You Win");
+                wins  = wins +1;
+             }
+            
+                
+            
             if (randomNumber == 3 && radScissors.Checked)
+            {
                 lblGameResult.Text = ("You tie");
+                ties = ties+1;
+            }
+            lblNumberOfWins.Text = Convert.ToString(wins);
+            lblNumberOfTies.Text = Convert.ToString(ties);
+            lblNumberOFLosses.Text = Convert.ToString(losses);
 
 
 
